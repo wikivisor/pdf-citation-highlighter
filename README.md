@@ -2,7 +2,7 @@
 ### Description
 **A Python application that highlights the provided citation on a given page of a PDF file.** 
 
-The highlight color and port are configurable. The default highlight color can be overriden by the URL parameter.
+The highlight color and port are configurable. The default highlight color can be overridden by the URL parameter.
 
 The application is intended to run on MediaWiki sites. It provides a MediaWiki template for building PDF citation links. It uses a Cargo table with the allowed PDF URLs to prevent exploits.
 
