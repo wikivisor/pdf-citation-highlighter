@@ -1,0 +1,16 @@
+== Link Example ==
+{{PDFCite
+|file=https://wikivisor.com/w/images/3/34/Peer_adult_network_structure_and_suicide_attempts_in_38_high_schools.pdf
+|citation=b) Mean number of friends named, and (c) Mean coreness. Table 1 describes school-level variables and each school’s network structure relative to all others (e.g., percent isolates ranged 0–6.45% across the 38 schools)
+|page=3
+|color=33eeff
+|text=Peer adult network structure and suicide attempts in 38 high schools
+}}
+== Query Example ==
+{{#cargo_query:
+tables=PDFCite
+|fields=_pageName=Article,File,Page,Cite
+|format=table
+|limit=1
+|more results text=
+}}

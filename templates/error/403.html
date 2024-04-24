@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Error
+{% endblock title %}
+
+{% block content %}
+
+<div class="lock"></div>
+<div class="message">
+    <h1 class="error-title">
+        <span class="error-code">403</span><br>Something went wrong.
+    </h1>
+    <p>The URL to a PDF file you provided is not allowed.</p>
+</div>
+
+{% endblock content %}

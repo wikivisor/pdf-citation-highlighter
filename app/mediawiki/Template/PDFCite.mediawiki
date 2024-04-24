@@ -1,0 +1,38 @@
+<includeonly>{{#ifeq:{{{text|}}}
+     |quote
+     |
+<div class="pdfquote">
+   <div class="cite pdfcite">{{#widget: PDFCite
+     |url={{{file}}}
+     |search={{{citation}}}
+     |page={{{page}}}
+     |color={{{color|}}}
+     |text={{int:pdfcite-prompt}}
+     |tooltip={{{tooltip|{{{file}}}}}}
+     |class={{#ifeq: {{#explode:{{{file}}}|/|2}}|{{#explode:{{SERVER}}|/|2}}|plainlinks|external}}
+   }}
+   </div>
+   <blockquote>
+{{{citation}}}
+   </blockquote>
+</div>
+     |<span class="cite pdfcite">{{#widget: PDFCite
+        |url={{{file}}}
+        |search={{{citation}}}
+        |page={{{page}}}
+        |color={{{color|}}}
+        |text={{{text|{{int:pdfcite-prompt}}}}}
+        |tooltip={{{tooltip|{{{file}}}}}}
+        |class={{#ifeq: {{#explode:{{{file}}}|/|2}}|{{#explode:{{SERVER}}|/|2}}|plainlinks|external}}
+      }}</span>
+   }}<!--
+
+-->{{#cargo_store:_table=PDFCite
+     |File={{{file}}}
+     |Cite={{{citation}}}
+     |Page={{{page}}}
+   }}</includeonly><noinclude>
+{{#cargo_attach:_table=PDFCite}}
+{{{{PAGENAME}}/doc}}
+</div>
+</noinclude>

@@ -1,0 +1,57 @@
+{
+  "publisher": "Toolkit.Socialnetwork.Health",
+  "author": [
+    "Anton Krom"
+  ],
+  "language": "en",
+  "url": "https://github.com/WikiWorks/Page-Exchange-packages",
+  "licenseName": "CC BY-SA 4.0",
+  "packages": {
+    "PDF Citation Highlighter": {
+      "globalID": "health.socialnetwork.toolkit.pdf-citation-highlighter",
+      "publisherURL": "https://toolkit.socialnetwork.health",
+      "description": "Creates a template for the automated generation of a link to a PDF file with the citation highlighting.",
+      "version": "0.1",
+      "pages": [
+        {
+          "name": "PDFCite",
+          "namespace": "NS_TEMPLATE",
+          "url": "https://raw.githubusercontent.com/richbodo/mw_pdf_highlights/main/app/mediawiki/Template/PDFCite.mediawiki"
+        },
+        {
+          "name": "PDFCite/doc",
+          "namespace": "NS_TEMPLATE",
+          "url": "https://raw.githubusercontent.com/richbodo/mw_pdf_highlights/main/app/mediawiki/Template/PDFCite%2Fdoc.mediawiki"
+        },
+        {
+          "name": "PDFCite_Table",
+          "namespace": "NS_TEMPLATE",
+          "url": "https://raw.githubusercontent.com/richbodo/mw_pdf_highlights/main/app/mediawiki/Template/PDFCite_Table.mediawiki"
+        },        
+        {
+          "name": "PDFCite",
+          "namespace": "NS_WIDGET",
+          "url": "https://raw.githubusercontent.com/richbodo/mw_pdf_highlights/main/app/mediawiki/Widget/PDFCite.mediawiki"
+        },
+        {
+          "name": "PDFCite",
+          "namespace": "NS_PROJECT",
+          "url": "https://raw.githubusercontent.com/richbodo/mw_pdf_highlights/main/app/mediawiki/Project/PDFCite.mediawiki"
+        },
+        {
+          "name": "pdfcite-prompt",
+          "namespace": "NS_MEDIAWIKI",
+          "url": "https://raw.githubusercontent.com/richbodo/mw_pdf_highlights/main/app/mediawiki/MediaWiki/pdfcite-prompt.mediawiki"
+        },
+        {
+          "name": "pdfcite-styles.css",
+          "namespace": "NS_MEDIAWIKI",
+          "url": "https://raw.githubusercontent.com/richbodo/mw_pdf_highlights/main/app/mediawiki/MediaWiki/pdfcite-styles.css.mediawiki"
+        }         
+      ],
+      "requiredExtensions": [
+        "Cargo"
+      ]
+    }
+  }
+}

@@ -1,0 +1,97 @@
+<templatedata>
+{
+	"params": {
+		"file": {
+			"label": "URL to the PDF file",
+			"description": "A fully qualified URL to the PDF file.",
+			"example": "https://domain.tld/filename.pdf",
+			"type": "url",
+			"required": true
+		},
+		"citation": {
+			"label": "Text of citation",
+			"description": "The cited passage in plain text.",
+			"type": "string",
+			"required": true
+		},
+		"page": {
+			"label": "Page number",
+			"description": "A number of page in the PDF file that contains the cited passage.",
+			"type": "number",
+			"required": true
+		},
+		"color": {
+			"label": "Highlight color",
+			"description": "The hex color code without a leading hash.",
+			"example": "FFEEDD",
+			"type": "string"
+		},
+		"text": {
+			"label": "Link text",
+			"type": "unbalanced-wikitext",
+			"default": "PDF",
+			"required": false,
+			"description": "It will become a clickable text or html element. If you want to display the citation text on the wiki page, type 'quote' here (without quotes)."
+		},
+		"tooltip": {
+			"label": "Tooltip text",
+			"description": "Text shown on hovering over the link. If not provided, the URL of the PDF file will be shown.",
+			"type": "string"
+		}
+	},
+	"description": "Inserts a link to the PDF file and ensures the highlighting of the provided citation on the given page."
+}
+</templatedata>
+
+;Code
+<pre>
+{{PDFCite
+|file=
+|citation=
+|page=
+|text=
+|color=
+}}
+</pre>
+;Example
+<pre>
+{{PDFCite
+|file=https://wikivisor.com/w/images/3/34/Peer_adult_network_structure_and_suicide_attempts_in_38_high_schools.pdf
+|citation=(b) Mean number of friends named, and (c) Mean coreness. Table 1 describes school-level variables and each school’s network structure relative to all others (e.g., percent isolates ranged 0–6.45% across the 38 schools)
+|page=3
+|color=33eeff
+}}
+</pre>
+;Result
+{{PDFCite
+|file=https://wikivisor.com/w/images/3/34/Peer_adult_network_structure_and_suicide_attempts_in_38_high_schools.pdf
+|citation=(b) Mean number of friends named, and (c) Mean coreness. Table 1 describes school-level variables and each school’s network structure relative to all others (e.g., percent isolates ranged 0–6.45% across the 38 schools)
+|page=3
+|color=33eeff
+}}
+;Quote mode
+{{PDFCite
+|file=https://wikivisor.com/w/images/3/34/Peer_adult_network_structure_and_suicide_attempts_in_38_high_schools.pdf
+|citation=(b) Mean number of friends named, and (c) Mean coreness. Table 1 describes school-level variables and each school’s network structure relative to all others (e.g., percent isolates ranged 0–6.45% across the 38 schools)
+|page=3
+|color=33eeff
+|text=quote
+}}
+;Inline usage
+Table 1 describes school-level percent isolates ranged {{PDFCite
+|file=https://wikivisor.com/w/images/3/34/Peer_adult_network_structure_and_suicide_attempts_in_38_high_schools.pdf
+|citation=(b) Mean number of friends named, and (c) Mean coreness. Table 1 describes school-level variables and each school’s network structure relative to all others (e.g., percent isolates ranged 0–6.45% across the 38 schools)
+|page=3
+|color=33eeff
+|text=0–6.45% 
+}} across the 38 schools.
+;Local PDF (fake example)
+If the URL belongs to the current wiki domain, the external icon will not be printed:
+{{PDFCite
+|file=https://toolkit.socialnetwork.health/w/images/3/34/Peer_adult_network_structure_and_suicide_attempts_in_38_high_schools.pdf
+|citation=(b) Mean number of friends named, and (c) Mean coreness. Table 1 describes school-level variables and each school’s network structure relative to all others (e.g., percent isolates ranged 0–6.45% across the 38 schools)
+|page=3
+|color=33eeff
+}}
+;Visual mode
+If you use VisualEditor, you can insert the template interactively (''Insert'' &rarr; ''Template'' &rarr; ''PDFCite'') and fill parameters in a form.

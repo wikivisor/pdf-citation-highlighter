@@ -1,0 +1,1 @@
+<a target="_blank" class="pdfcite-link <!--{$class}-->" title="<!--{$tooltip}-->" href="/pdfcite/?url=<!--{$url|escape:'url'}-->&page=<!--{$page}-->&color=<!--{$color}-->&search=<!--{$search}-->#page=<!--{$page}-->"><!--{$text|default:'PDF'}--></a>

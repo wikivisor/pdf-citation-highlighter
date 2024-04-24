@@ -1,0 +1,6 @@
+{{#cargo_declare:
+_table = PDFCite
+|File=URL
+|Cite=Text
+|Page=Integer
+}}

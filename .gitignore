@@ -1,0 +1,16 @@
+.idea
+.env*
+!app/config/.env.example
+**/__pycache___
+**/__pycache__
+.pytest_cache
+**/.vscode
+**/node_modules
+**/venv
+**/.next
+**/.idea
+**/.env
+**/logs
+**/database
+**/*.db
+**/instance

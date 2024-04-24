@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/main.css" />
+    <title>{% block title %}{% endblock title %}</title>
+    <style>
+        body {
+            font-family: Roboto, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="p-2">
+        {% block content %}
+        {% endblock content %}
+    </main>
+    <footer>
+        <a href="/wiki/Main_Page" class="mw-logo p-2">
+	        <img class="mw-logo-icon" src="../favicon.ico" alt="" aria-hidden="true" height="48" width="48">
+        </a>
+    </footer>
+</body>
+
+</html>

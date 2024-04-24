@@ -1,0 +1,13 @@
+[Unit]
+Description=PDF Citation Highlighter
+After=network.target
+
+[Service]
+Type=simple
+User=wikivisor
+WorkingDirectory=/home/wikivisor/WebstormProjects/pdf-citation-highlighter
+ExecStart=/usr/bin/python /home/wikivisor/WebstormProjects/pdf-citation-highlighter/server.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
