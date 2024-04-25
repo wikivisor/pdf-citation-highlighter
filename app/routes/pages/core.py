@@ -31,7 +31,12 @@ def home_route():
             rects = page.search_for(search_string)
 
             if rects:
-                page.add_highlight_annot(rects)
+                annotation = page.add_highlight_annot(rects)
+
+                #! colors can be updated by altering fill color
+                annotation.set_colors(stroke=(0,1,1))
+
+                annotation.update()
 
         data = doc.tobytes(compression_effort=1)
 
