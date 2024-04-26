@@ -7,11 +7,10 @@ ENV_FILE_PATH = BASE_DIR / ".env"
 
 load_dotenv(ENV_FILE_PATH)
 
-RED = float(os.environ.get("RED", 1))
-GREEN = float(os.environ.get("GREEN", 1))
-BLUE = float(os.environ.get("BLUE", 0))
+HIGHLIGHT_COLOR = os.environ.get("HIGHLIGHT_COLOR", "#FFFF00")
+PORT = int(os.environ.get("PORT", "5001"))
 
 class ProdConfig:
-    RED = RED
-    GREEN = GREEN
-    BLUE = BLUE
+    HIGHLIGHT_COLOR = HIGHLIGHT_COLOR
+    PORT = PORT
+

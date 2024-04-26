@@ -5,6 +5,9 @@ from urllib.parse import urlparse
 
 core_bp = Blueprint("core", __name__, url_prefix="/")
 
+def hex_to_rgb(hex_color: str):
+    return tuple((int(hex_color.lstrip('#')[i:i+2], 16)/255) for i in (0, 2, 4))
+
 @core_bp.route('/')
 def home_route():
     url = request.args.get('url')
@@ -34,7 +37,7 @@ def home_route():
                 annotation = page.add_highlight_annot(rects)
 
                 #! colors can be updated by altering stroke color stroke=(R,G,B)
-                annotation.set_colors(stroke=(current_app.config["RED"],current_app.config["GREEN"],current_app.config["BLUE"]))
+                annotation.set_colors(stroke=hex_to_rgb(current_app.config["HIGHLIGHT_COLOR"]))
 
                 annotation.update()
 
