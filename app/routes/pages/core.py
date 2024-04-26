@@ -33,8 +33,8 @@ def home_route():
             if rects:
                 annotation = page.add_highlight_annot(rects)
 
-                #! colors can be updated by altering fill color
-                annotation.set_colors(stroke=(0,1,1))
+                #! colors can be updated by altering stroke color stroke=(R,G,B)
+                annotation.set_colors(stroke=(1,1,0)) 
 
                 annotation.update()
 
