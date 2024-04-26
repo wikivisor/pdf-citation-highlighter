@@ -12,7 +12,7 @@ def hex_to_rgb(hex_color: str):
 def home_route():
     url = request.args.get('url')
     search_string = request.args.get('search')
-
+    highlight = request.args.get('color')
 
     page_number = int(request.args.get('page', '1')) - 1
 
@@ -36,8 +36,11 @@ def home_route():
             if rects:
                 annotation = page.add_highlight_annot(rects)
 
-                #! colors can be updated by altering stroke color stroke=(R,G,B)
-                annotation.set_colors(stroke=hex_to_rgb(current_app.config["HIGHLIGHT_COLOR"]))
+                if highlight:
+                     annotation.set_colors(stroke=hex_to_rgb( "#" + highlight))
+                else:
+                     default_highlight_color = current_app.config["HIGHLIGHT_COLOR"]
+                     annotation.set_colors(stroke=hex_to_rgb(default_highlight_color))
 
                 annotation.update()
 
