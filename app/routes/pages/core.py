@@ -1,4 +1,4 @@
-from flask import Blueprint, request, make_response, render_template
+from flask import Blueprint, request, make_response, render_template, current_app
 import fitz
 import requests
 from urllib.parse import urlparse
@@ -34,7 +34,7 @@ def home_route():
                 annotation = page.add_highlight_annot(rects)
 
                 #! colors can be updated by altering stroke color stroke=(R,G,B)
-                annotation.set_colors(stroke=(1,1,0)) 
+                annotation.set_colors(stroke=(current_app.config["RED"],current_app.config["GREEN"],current_app.config["BLUE"]))
 
                 annotation.update()
 

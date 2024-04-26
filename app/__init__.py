@@ -9,6 +9,9 @@ def create_app():
 
     app.app_context().push()
 
+    from app.config.prod import ProdConfig
+
+    app.config.from_object(ProdConfig)
 
     from app.extensions import cors
     
