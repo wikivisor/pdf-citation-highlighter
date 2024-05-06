@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>{% block title %}{% endblock title %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: red;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="p-2">
+        {% block content %}
+        {% endblock content %}
+    </main>
+</body>
+
+</html>
